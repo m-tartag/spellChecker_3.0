@@ -75,5 +75,16 @@
 }
 .resultRed {
     color: red;
-
+}
+.definition {
+    font-size: 18px;
+    font-weight: italic;
+    color:white;
+  
+}
+.x {
+    display:block;
+}
+#def {
+    color: #F1BF31;
 }
