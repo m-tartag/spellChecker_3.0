@@ -1,3 +1,71 @@
 * {
+    font-family: 'Cuprum', sans-serif;
+}
+.topJumbotron {
     text-align:center;
+    padding-top: 20px;
+    font-size: 0px;
+}
+.navbar {
+    background-color: #3C3C65;
+}
+.navbar-brand {
+    font-size: 30px;
+}
+.submitButton {
+    color: black;
+    background-color:#F1BF31;
+    border-color:black;
+    border-width: 5px;
+}
+
+.submitJumbotron {
+    background-image: url("letters.jpg");
+    border-width:20px;
+    border-style:solid;
+    border-color:#3C3C65;
+    padding-bottom: 20px;
+}
+.inputTextArea {
+    border-width:20px;
+    border-style:solid;
+    border-color:#3C3C65;
+    font-size: 22px;
+    
+}
+
+#logo {
+    color: #F1BF31;
+    font-size: 25px;
+}
+
+
+
+.result {
+    border-width:20px;
+    border-style:solid;
+    border-color:#3C3C65;
+    background-color:black;
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom:30px;
+    padding-top:30px;
+}
+
+.resultToggle {
+    display: none;   
+}
+
+.resultGreen {
+    color: green;
+  
+}
+.resultRed {
+    color: red;
+
+}
+
+#icon {
+    
+    float:left;
 }

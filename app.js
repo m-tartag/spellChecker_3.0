@@ -1,84 +1,77 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+// [NPM Packages]
+const express = require('express')
+const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
+const cors = require('cors')
 
-// Initialize app
-
-const app = express();
-
-
+// [Initialize app]
+const app = express()
 
 // [Connect to MongoDB w/ Mongoose]
+mongoose.connect('mongodb://localhost:27017/wordDatabase', {useNewUrlParser: true})
+  .then(() => {console.log('MongoDB Succesfully Connected.')})
+  .catch((err) => {console.log(`Whoops! ${err}`)})
 
-mongoose.connect('mongodb://localhost/wordDatabase', {
-  useNewUrlParser: true
-})
-  .then(() => {
-    console.log('MongoDB Succesfully Connected.')
-  })
-  .catch((err) => {
-    console.log(`Whoops! ${err}`)
-  });
+// [Import Schema]
+require('./models/Words')
+const Word = mongoose.model('words')
 
+// [Middleware]
 
+  // 1. [Body-Parser]
 
-// [*~*~*~* Middleware *~*~*~*]
-
-
-
-// 1. [Body-Parser]
-
-app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-// 2. [Express.static] 
+  // 2. [Express.static] 
 
-app.use(express.static('public'));
-
-// 3. HandleBars
+app.use(express.static(__dirname + '/public'));
 
 
-// 4. 
+// [Routes]
+
+  // [API Route]
+
+  app.get('/api', cors(), function(req, res) {
+    const queryBuffer = req.query.word
+    const query = queryBuffer.toLowerCase()
+
+   
+    
+
+    //  Logic for multi-word input
+    //                            //
+    //                            //
+    //                            //
+    //                            //
+    //                            //
+    // ============================
 
 
 
 
-// [*~*~*~* Routes *~*~*~*]
-
-// [Index]
-
-app.get('/', (req, res) => {
-  const title = 'Spell Checker';
-  res.render(index.html, {
-    title: title
-  });
-  
+    Word.find({
+      'word': query
+    }, function (err, result) {
+      if (err) throw err
+      if (result) {
+        res.json(result)
+      } else {
+        res.send(JSON.stringify({
+            error: 'Error'
+        }))
+      }
+    })
 })
 
-// [About]
+// [About] 
 
 app.get('/about', (req, res) => {
   res.render(about.html);
-  
+
 })
 
-// [Create Account]
-
-app.get('/account/new', (req, res) => {
-  res.render(newAccount.html);
-})
-
-
-
-
-
-
-
-
-
-
-
-// Port / Listener
+// [Port]
 
 const port = process.env.PORT || 4000;
 
