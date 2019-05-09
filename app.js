@@ -1,18 +1,22 @@
 // [NPM Packages]
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const cors = require('cors')
 
 // [Initialize app]
+
 const app = express()
 
 // [Connect to MongoDB w/ Mongoose]
+
 mongoose.connect('mongodb://localhost:27017/wordDatabase', {useNewUrlParser: true})
   .then(() => {console.log('MongoDB Succesfully Connected.')})
   .catch((err) => {console.log(`Whoops! ${err}`)})
 
 // [Import Schema]
+
 require('./models/Words')
 const Word = mongoose.model('words')
 

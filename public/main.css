@@ -1,6 +1,12 @@
+/* [Global CSS] */
+/****************/
+
 * {
     font-family: 'Cuprum', sans-serif;
 }
+
+/* [Index Styling] */
+
 .topJumbotron {
     text-align:center;
     padding-top: 20px;
@@ -30,17 +36,12 @@
     border-width:20px;
     border-style:solid;
     border-color:#3C3C65;
-    font-size: 22px;
-    
+    font-size: 22px;   
 }
-
 #logo {
     color: #F1BF31;
     font-size: 25px;
 }
-
-
-
 .result {
     border-width:20px;
     border-style:solid;
@@ -51,7 +52,6 @@
     padding-bottom:30px;
     padding-top:30px;
 }
-
 .resultToggle {
     display: none;   
 }
@@ -63,9 +63,4 @@
 .resultRed {
     color: red;
 
-}
-
-#icon {
-    
-    float:left;
 }
