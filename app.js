@@ -38,11 +38,9 @@ app.use(express.static(__dirname + '/public'));
 
   app.get('/api', cors(), function(req, res) {
     const queryBuffer = req.query.word
-    const query = queryBuffer.toLowerCase()
+    const query = queryBuffer.replace(/[^A-Za-z]/g, '').toLowerCase()
 
    
-    
-
     //  Logic for multi-word input
     //                            //
     //                            //
@@ -52,14 +50,12 @@ app.use(express.static(__dirname + '/public'));
     // ============================
 
 
-
-
     Word.find({
       'word': query
     }, function (err, result) {
       if (err) throw err
       if (result) {
-        res.json(result)
+        res.send(result)
       } else {
         res.send(JSON.stringify({
             error: 'Error'

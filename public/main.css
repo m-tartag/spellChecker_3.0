@@ -26,12 +26,25 @@
 }
 
 .submitJumbotron {
-    background-image: url("letters.jpg");
     border-width:20px;
     border-style:solid;
     border-color:#3C3C65;
     padding-bottom: 20px;
+    background-image: url("letters.jpg");
 }
+/* .submitJumbotron::before {
+    background-image: url("letters.jpg");
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0.7;
+    background-size: cover;
+} */
 .inputTextArea {
     border-width:20px;
     border-style:solid;
@@ -57,7 +70,7 @@
 }
 
 .resultGreen {
-    color: green;
+    color: #7FF216;
   
 }
 .resultRed {
