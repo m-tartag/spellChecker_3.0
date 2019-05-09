@@ -7,6 +7,7 @@ $(document).ready(() => {
     const checkMark = `<i class="fas fa-trophy"></i>`
     const wrongMark = `<i class="fas fa-skull"></i>`
 
+    // API call to my server (which serves me my mongoDB)
     $.ajax({
         url: Url, 
         type: 'GET',
@@ -28,7 +29,8 @@ $(document).ready(() => {
                   $('.definition').append(`<span id='def'>Definition: </span><span>${result[0].shortdef[0]}</span>`)
                   
                   }
-                }) 
+                })
+
           } else {
               
               $('.definition').html('')
@@ -54,8 +56,3 @@ $(document).ready(() => {
   
   //doc.ready end
   })
-
-
-
-
-// https://dictionaryapi.com/api/v3/references/collegiate/json/test?key=782db00d-932d-43aa-9e2d-053051f3251b

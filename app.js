@@ -39,15 +39,16 @@ app.use(express.static(__dirname + '/public'));
   app.get('/api', cors(), function(req, res) {
     const queryBuffer = req.query.word
     const query = queryBuffer.replace(/[^A-Za-z]/g, '').toLowerCase()
+    
 
-   
-    //  Logic for multi-word input
+    ////////////////////////////////
+    // Logic for multi-word input //
     //                            //
+    //          COMING            //
     //                            //
+    //           SOON             //
     //                            //
-    //                            //
-    //                            //
-    // ============================
+    ////////////////////////////////
 
 
     Word.find({
