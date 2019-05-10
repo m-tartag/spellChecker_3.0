@@ -1,10 +1,13 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require('mongoose');
 
-// [Schema]
+const { Schema } = mongoose;
+
+// Create Schema
 
 const WordSchema = new mongoose.Schema({
-  word: String
+  word: String,
 });
 
-mongoose.model("words", WordSchema);
+// Export Schema
+
+mongoose.model('words', WordSchema);
