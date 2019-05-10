@@ -76,7 +76,7 @@ app.get('/api', cors(), function(req, res) {
 // [About]
 
 app.get('/about', (req, res) => {
-  res.render(about.html);
+  res.render('about.html');
 });
 
 // [Port]
