@@ -1,6 +1,5 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
 
 // [Schema]
 
@@ -8,5 +7,4 @@ const WordSchema = new mongoose.Schema({
   word: String
 });
 
-
-mongoose.model('words', WordSchema);
+mongoose.model("words", WordSchema);

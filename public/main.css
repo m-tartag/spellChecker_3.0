@@ -2,35 +2,35 @@
 /****************/
 
 * {
-    font-family: 'Cuprum', sans-serif;
+  font-family: "Cuprum", sans-serif;
 }
 
 /* [Index Styling] */
 
 .topJumbotron {
-    text-align:center;
-    padding-top: 20px;
-    font-size: 0px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0px;
 }
 .navbar {
-    background-color: #3C3C65;
+  background-color: #3c3c65;
 }
 .navbar-brand {
-    font-size: 30px;
+  font-size: 30px;
 }
 .submitButton {
-    color: black;
-    background-color:#F1BF31;
-    border-color:black;
-    border-width: 5px;
+  color: black;
+  background-color: #f1bf31;
+  border-color: black;
+  border-width: 5px;
 }
 
 .submitJumbotron {
-    border-width:20px;
-    border-style:solid;
-    border-color:#3C3C65;
-    padding-bottom: 20px;
-    background-image: url("letters.jpg");
+  border-width: 20px;
+  border-style: solid;
+  border-color: #3c3c65;
+  padding-bottom: 20px;
+  background-image: url("letters.jpg");
 }
 /* .submitJumbotron::before {
     background-image: url("letters.jpg");
@@ -46,45 +46,43 @@
     background-size: cover;
 } */
 .inputTextArea {
-    border-width:20px;
-    border-style:solid;
-    border-color:#3C3C65;
-    font-size: 22px;   
+  border-width: 20px;
+  border-style: solid;
+  border-color: #3c3c65;
+  font-size: 22px;
 }
 #logo {
-    color: #F1BF31;
-    font-size: 25px;
+  color: #f1bf31;
+  font-size: 25px;
 }
 .result {
-    border-width:20px;
-    border-style:solid;
-    border-color:#3C3C65;
-    background-color:black;
-    font-size: 22px;
-    font-weight: bold;
-    padding-bottom:30px;
-    padding-top:30px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: #3c3c65;
+  background-color: black;
+  font-size: 22px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 .resultToggle {
-    display: none;   
+  display: none;
 }
 
 .resultGreen {
-    color: #7FF216;
-  
+  color: #7ff216;
 }
 .resultRed {
-    color: red;
+  color: red;
 }
 .definition {
-    font-size: 18px;
-    font-weight: italic;
-    color:white;
-  
+  font-size: 18px;
+  font-weight: italic;
+  color: white;
 }
 .x {
-    display:block;
+  display: block;
 }
 #def {
-    color: #F1BF31;
+  color: #f1bf31;
 }
