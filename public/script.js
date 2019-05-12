@@ -4,7 +4,7 @@ $(document).ready(() => {
     // My Server URL
     const Url = 'http://localhost:4000/api';
     // Dictionary API URL
-    const defineUrl = `https://dictionaryapi.com/api/v3/references/collegiate/json/${input}?key=782db00d-932d-43aa-9e2d-053051f3251b`;
+    const defineUrl = `https://dictionaryapi.com/api/v3/references/collegiate/json/${input}?key=''`;
     // Font Awesome Icons
     const checkMark = `<i class="fas fa-trophy"></i>`;
     const wrongMark = `<i class="fas fa-skull"></i>`;
@@ -62,7 +62,7 @@ $(document).ready(() => {
         }
       },
       error(error) {
-        console.log(error);
+        console.log(`Error: ${error}`);
       },
     });
   });
