@@ -29,7 +29,7 @@ $(document).ready(() => {
           $.ajax({
             url: defineUrl,
             type: 'GET',
-            success(result) {
+            success(res) {
               // .html('') Will Clear the Div for Re-Submissions
               $('.definition').html('');
               $('.results').html('');
@@ -42,7 +42,7 @@ $(document).ready(() => {
               $('.results').append(`${input} ${checkMark}`);
               $('.definition').append(
                 `<span id='def'>Definition: </span><span>${
-                  result[0].shortdef[0]
+                  res[0].shortdef[0]
                 }</span>`
               );
             },
