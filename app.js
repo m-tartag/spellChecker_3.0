@@ -63,11 +63,7 @@ app.get('/api', cors(), function(req, res) {
       if (result) {
         res.send(result);
       } else {
-        res.send(
-          JSON.stringify({
-            error: 'Error',
-          })
-        );
+        res.send(JSON.stringify({ error: 'Error' }));
       }
     }
   );

@@ -22,6 +22,7 @@ $(document).ready(() => {
       type: 'GET',
       data: { word: input },
       success(result) {
+        console.log(result);
         // Response: Word= Object, Non-Word = Empty []
         // If Length Exists - Must be a word!
         if (result.length > 0) {
